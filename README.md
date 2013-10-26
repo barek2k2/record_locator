@@ -29,13 +29,13 @@ Suppose, you want to apply this encoding stuff on your Book Model's publisher_id
   </code>
 </pre>
 
-Now restart your server!
+<strong>Now restart your server!</strong>
 
 <p>
 <strong> has_record_locator will expect Numeric field only (here publisher_id is Integer)</strong>
 </p>
 
-You can see the encoded value by calling encoded_record_locator method from your ActiveRecord model object:
+From your ActiveRecord model object, You can get the encoded value by calling encoded_record_locator method:
 <pre>
   <code>
     @book.encoded_record_locator
@@ -48,6 +48,3 @@ You can find the ActiveRecord Model Object by passing encoded value, for example
     Blog.record_locator.find(params[:encoded_publisher_id])
   </code>
 </pre>
-
-
-
