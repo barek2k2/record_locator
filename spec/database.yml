@@ -1,0 +1,11 @@
+mysql:
+  adapter: mysql2
+  database: record_locator_test
+  username: root
+  password: root
+  host: localhost
+  encoding: utf8
+
+sqlite3:
+  adapter: sqlite3
+  database: record_locator_test.sqlite3
