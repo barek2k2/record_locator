@@ -1,7 +1,12 @@
-source :rubygems
+source 'https://rubygems.org'
 gemspec
-gem 'rspec', '~> 2.5.0'
-gem 'rails', '4.0.0'
-gem 'sqlite3'
 
-gem "mysql2", "~> 0.3.11"
+group :test, :development do
+  gem 'rails', '~> 3.2' do
+    gem 'activerecord'
+    gem 'railties'
+  end
+  gem 'sqlite3'
+
+  gem 'rspec', '~> 2.5.0'
+end
