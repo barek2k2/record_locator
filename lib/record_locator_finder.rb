@@ -8,6 +8,10 @@ class Finder
     find_all(id).first
   end
   def find_all(id)
-    @model.where("#{@record_locator_field}=?", Util::Base::decode(id.to_s))
+    # for Rails > 4.0, use ActiveRecord where method
+    #@model.where("#{@record_locator_field}=?", Util::Base::decode(id.to_s))
+
+    # supported until rails 4.0 from rails 2.3
+    @model.find(:all, :conditions => "#{@record_locator_field}='#{Util::Base::decode(id.to_s)}'")
   end
 end

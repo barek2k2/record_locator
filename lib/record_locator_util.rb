@@ -1,9 +1,9 @@
 module Util
   ENCODER = Hash.new do |h,k|
-    h[k] = Hash[ k.chars.map.with_index.to_a.map(&:reverse) ]
+    h[k] = Hash[ k.chars.map.enum_for(:each_with_index).to_a.map(&:reverse) ]
   end
   DECODER = Hash.new do |h,k|
-    h[k] = Hash[ k.chars.map.with_index.to_a ]
+    h[k] = Hash[ k.chars.map.enum_for(:each_with_index).to_a ]
   end
 
   BASE32 = "23456789ABCDEFGHJKLMNPqRSTUVWXYZ"
