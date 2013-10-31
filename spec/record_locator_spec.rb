@@ -54,5 +54,11 @@ describe 'RecordLocator' do
     @book.should === Book.record_locator.find(encoded_field)
   end
 
+  it "Should return Activerecord Object by passing normal id instead of passing encoded id" do
+    publisher_id = @book.publisher_id
+
+    @book.should === Book.record_locator.find(publisher_id)
+  end
+
 
 end
