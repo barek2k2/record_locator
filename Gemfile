@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 gemspec
 
 group :test, :development do
-  gem 'rails', '~> 3.2' do
+  gem 'rails', '~> 2.3' do
     gem 'activerecord'
     gem 'railties'
   end
