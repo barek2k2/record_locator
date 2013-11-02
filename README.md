@@ -1,5 +1,5 @@
 # Introduction
-Sometimes you may not want to expose Database table ID on application but you need to show/use the ID as encoded.
+Sometimes you may not want to expose Database table ID on application or on browsers but you need to show/use the ID as encoded.
 
 In that case, record_locator ruby gem will provide you flexible way to show the same ID encoded and at the same time
 you can find ActiveRecord object by the encoded id from your application instead of using original database ID!
