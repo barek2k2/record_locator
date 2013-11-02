@@ -1,8 +1,8 @@
 # Introduction
-Sometimes you may not want to expose Database table ID on application but you need to show the ID.
+Sometimes you may not want to expose Database table ID on application but you need to show/use the ID as encoded.
 
-In that case, record_locator Gem will provide you flexiable stuff to show the same ID encoded and at the same time
-you can find ActiveRecord object by the encoded id from your application instead of using original ID.
+In that case, record_locator ruby gem will provide you flexible way to show the same ID encoded and at the same time
+you can find ActiveRecord object by the encoded id from your application instead of using original database ID!
 
 # How to install
 Include the gem into your Gemfile
@@ -38,13 +38,30 @@ Suppose, you want to apply this encoding stuff on your Book Model's publisher_id
 From your ActiveRecord model object, You can get the encoded value by calling encoded_record_locator method:
 <pre>
   <code>
-    @book.encoded_record_locator
+    encoded_publisher_id = @book.encoded_record_locator
   </code>
 </pre>
+
+Here, encoded_publisher_id will give you the encoded id of publisher_id of Book Model
 
 You can find the ActiveRecord Model Object by passing encoded value, for example:
 <pre>
   <code>
-    Blog.record_locator.find(params[:encoded_publisher_id])
+    Blog.record_locator.find(encoded_publisher_id)
+  </code>
+</pre>
+
+You can get ActiveRecord objects as Array like this:
+<pre>
+  <code>
+    Blog.record_locator.find_all(encoded_publisher_id)
+  </code>
+</pre>
+
+If you want to pass origin ActiveRecord ID instead of encoded ID then you can pass simply the originla ID and this
+gem will give you original Activerecord object as normal like this:
+<pre>
+  <code>
+    Blog.record_locator.find(params[:publisher_id])
   </code>
 </pre>
