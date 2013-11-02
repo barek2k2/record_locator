@@ -65,3 +65,7 @@ gem will give you original Activerecord object as normal like this:
     Blog.record_locator.find(params[:publisher_id])
   </code>
 </pre>
+
+#Tested and Supports for
+Ruby 1.8.7, 1.9.2,1.9.3,2.0
+Rails 2.3,3.2,4.0
