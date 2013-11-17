@@ -47,14 +47,14 @@ Here, encoded_publisher_id will give you the encoded id of publisher_id of Book 
 You can find the ActiveRecord Model Object by passing encoded value, for example:
 <pre>
   <code>
-    Blog.record_locator.find(encoded_publisher_id)
+    Book.record_locator.find(encoded_publisher_id)
   </code>
 </pre>
 
 You can get ActiveRecord objects as Array like this:
 <pre>
   <code>
-    Blog.record_locator.find_all(encoded_publisher_id)
+    Book.record_locator.find_all(encoded_publisher_id)
   </code>
 </pre>
 
@@ -62,7 +62,7 @@ If you want to pass origin ActiveRecord ID instead of encoded ID then you can pa
 gem will give you original Activerecord object as normal like this:
 <pre>
   <code>
-    Blog.record_locator.find(params[:publisher_id])
+    Book.record_locator.find(params[:publisher_id])
   </code>
 </pre>
 
