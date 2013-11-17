@@ -4,6 +4,11 @@ Sometimes you may not want to expose Database table ID on application or on brow
 In that case, record_locator ruby gem will provide you flexible way to show the same ID encoded and at the same time
 you can find ActiveRecord object by the encoded id from your application instead of using original database ID!
 
+For an example:
+Remember the last time that you bought an airline ticket? You got an email with a "record locator". When you checked in
+for your flight, the airline didn't make you enter "23873498712098234095723469" to get your boarding pass. You entered 
+something like "FK92B9", and your name. The airline used your name and that code to find the big ID.
+
 # How to install
 Include the gem into your Gemfile
 <pre>
